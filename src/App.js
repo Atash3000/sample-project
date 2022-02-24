@@ -1,5 +1,6 @@
 import './App.css';
 import { Fragment, useEffect, useState } from 'react';
+import Image from './components/Image';
 
 function App(props) {
   const [data, setData] = useState(null);
@@ -21,6 +22,7 @@ function App(props) {
     <Fragment>
       <h1>Hello React</h1>
       <h2>data:{data}</h2>
+      <Image />
     </Fragment>
   );
 }

@@ -9,7 +9,7 @@ function Image() {
 
   useEffect(() => {
     dispatch(getData());
-  });
+  }, []);
 
   return (
     <Fragment>
