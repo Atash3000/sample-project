@@ -13,6 +13,7 @@ app.get('/', function (req, res) {
 app.get('/home', (req, res) => {
   res.status(200).json({
     message: 'hello everybody',
+    image: './images/main.jpg',
   });
 });
 
