@@ -7,7 +7,7 @@ function App(props) {
   useEffect(() => {
     async function fetchData() {
       try {
-        const dataFromServer = await fetch('/home');
+        const dataFromServer = await fetch('http://localhost:4000/home');
         const json = await dataFromServer.json();
         setData(json.message);
         setImage(json.image);
