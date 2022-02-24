@@ -21,7 +21,7 @@ function App(props) {
 
   return (
     <Fragment>
-      <h1>Hello React</h1>
+      <h1>Hello React updated</h1>
       <h2>data:{data}</h2>
       {/* <Image /> */}
       <h3>imaga:</h3>
