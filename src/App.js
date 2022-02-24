@@ -1,7 +1,5 @@
 import './App.css';
 import { Fragment, useEffect, useState } from 'react';
-import Image from './components/Image';
-import mainImg from './main.jpg';
 
 function App(props) {
   const [data, setData] = useState(null);
@@ -23,11 +21,7 @@ function App(props) {
     <Fragment>
       <h1>Hello React updated-2</h1>
       <h2>data:{data}</h2>
-      {/* <Image /> */}
       <h3>imaga:</h3>
-      <div className='image-box'>
-        <img src={mainImg} alt='heroimage' height='200px' />
-      </div>
     </Fragment>
   );
 }
