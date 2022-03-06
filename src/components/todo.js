@@ -25,14 +25,33 @@ function Todo() {
     });
     setEnteredText('');
   };
-  console.log(todoList);
+
+  const deleteTodo = function (id) {
+    const filtered = todoList.filter((el) => el.id !== id);
+    setTodolist(filtered);
+  };
+
+  const editHandler = function (id) {
+    const task = todoList.find((el) => el.id === id);
+    if (!task) {
+      return;
+    }
+  };
   return (
     <div style={styled} className='container'>
       <input value={enteredText} onChange={onChangeHandler} type='text' />
       <button onClick={handleClick}>add</button>
       <ul>
         {todoList.map((el) => (
-          <li key={el.id}>{el.title}</li>
+          <li onDoubleClick={editHandler.bind(this, el.id)} key={el.id}>
+            {el.title}
+            <span
+              onClick={deleteTodo.bind(this, el.id)}
+              style={{ color: 'red', marginLeft: '10px' }}
+            >
+              delete
+            </span>
+          </li>
         ))}
       </ul>
     </div>
