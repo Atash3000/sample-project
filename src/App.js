@@ -16,7 +16,7 @@ function App(props) {
         const json = await dataFromServer.json();
         setData(json.message);
         setImage(json.image);
-        setTimeout(() => setLoading(false), 2000);
+        setLoading(false);
       } catch (err) {
         console.log('err', err);
         setLoading(false);
