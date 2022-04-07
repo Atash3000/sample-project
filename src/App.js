@@ -2,7 +2,7 @@ import './App.css';
 import { Fragment } from 'react';
 import Todo from './components/todo';
 import { useGetData } from './hooks/useGetdata';
-
+// const name
 function App(props) {
   const { state: dataState } = useGetData('api/v1/home');
   const { isLoading, error: isError, image, data } = dataState;
