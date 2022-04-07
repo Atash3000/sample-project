@@ -10,7 +10,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
-app.get('/home', (req, res) => {
+app.get('/api/v1/home', (req, res) => {
   res.status(200).json({
     message: 'hello everybody',
     image: './images/main.jpg',

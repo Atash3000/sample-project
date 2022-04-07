@@ -4,8 +4,8 @@ import Todo from './components/todo';
 import { useGetData } from './hooks/useGetdata';
 
 function App(props) {
-  const { state } = useGetData('http://localhost:4000/home');
-  const { isLoading, error: isError, image, data } = state;
+  const { state: dataState } = useGetData('api/v1/home');
+  const { isLoading, error: isError, image, data } = dataState;
 
   return (
     <Fragment>
